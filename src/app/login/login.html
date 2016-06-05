@@ -1,33 +1,41 @@
 <button class="btn btn-primary" (click)="loginModal.show()">Large modal</button>
 
 <!--login modal-->
-<div bsModal #loginModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+<div bsModal #loginModal="bs-modal" class="modal fade easylogin in" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
+
             <div class="modal-header">
                 <button type="button" class="close" (click)="loginModal.hide()" aria-label="Close" aria-hidden="true">×</button>
-                <h1 class="text-center">Login</h1>
+                <h4 class="modal-title">Sign in</h4>
             </div>
             <div class="modal-body">
+                <div class="info">Sign in with your email address</div>
 
+                <div class="form-group">
+                    <input type="text" #username class="form-input" id="username" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" #password class="form-input" id="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label style="font-weight: normal;">
+						<input type="checkbox" name="remember" value="1">
+						Remember my name
+					</label>
+                </div>
+
+            </div>
+            <div class="modal-footer">
                 <form role="form" (submit)="login($event, username.value, password.value)" class="form col-md-12 center-block">
-                    <div class="form-group">
-                        <input type="text" #username class="form-control input-lg" id="username" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" #password class="form-control input-lg" id="password" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">Sign In</button>
-                        <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <span class="ajax-loader"></span>
+                    <div class="pull-right align-right">
+                        <a href="#" data-toggle="modal" data-target="#EL_forgot_pass">Forgot Password</a><br>
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <div class="col-md-12">
-                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>

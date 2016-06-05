@@ -11,10 +11,10 @@ import {BOOTSTRAP3_DIRECTIVES} from './bootstrap3'
 
 // application_directives: directives that are global through out the application
 export const APPLICATION_DIRECTIVES = [
+  BOOTSTRAP3_DIRECTIVES,
   ...ROUTER_DIRECTIVES.filter(direc => direc != RouterOutlet)
 ];
 
 export const DIRECTIVES = [
-  BOOTSTRAP3_DIRECTIVES,
   {provide: PLATFORM_DIRECTIVES, multi: true, useValue: APPLICATION_DIRECTIVES }
 ];

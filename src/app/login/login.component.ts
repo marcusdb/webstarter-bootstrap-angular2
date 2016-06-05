@@ -10,9 +10,10 @@ let template = require('./login.html');
 
 @Component({
   selector: 'login',
-  directives: [RouterLink, CORE_DIRECTIVES, FORM_DIRECTIVES,MODAL_DIRECTVES],
+  directives: [RouterLink, CORE_DIRECTIVES, FORM_DIRECTIVES],
   viewProviders:[BS_VIEW_PROVIDERS],
-  template: template
+  template: template,
+  styles: [ require('./login.css') ],
 })
 export class Login {
   constructor(public router: Router, public http: Http) {

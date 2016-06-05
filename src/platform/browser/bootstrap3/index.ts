@@ -24,13 +24,14 @@ export const BOOTSTRAP3_DIRECTIVES = [
     AlertComponent,
     CollapseDirective,
     RatingComponent,
-    TimepickerComponent
+    TimepickerComponent,
+    BUTTON_DIRECTIVES
   ],
   ...ACCORDION_DIRECTIVES,
-  ...BUTTON_DIRECTIVES,
+  BUTTON_DIRECTIVES,
   ...CAROUSEL_DIRECTIVES,
   ...DROPDOWN_DIRECTIVES,
-  ...MODAL_DIRECTVES,
+  MODAL_DIRECTVES,
   ...PAGINATION_DIRECTIVES,
   ...PROGRESSBAR_DIRECTIVES,
   ...TAB_DIRECTIVES,
