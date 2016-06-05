@@ -6,7 +6,9 @@ import { RouteConfig, Router } from '@angular/router-deprecated';
 
 import { AppState } from './app.service';
 import { Home } from './home';
+import { Login } from './login/login.component'
 import { RouterActive } from './router-active';
+import { LoggedInRouterOutlet } from './router-active/loggedRouter.directive';
 
 /*
  * App Component
@@ -16,7 +18,7 @@ import { RouterActive } from './router-active';
   selector: 'app',
   pipes: [ ],
   providers: [ ],
-  directives: [ RouterActive ],
+  directives: [ RouterActive,LoggedInRouterOutlet ],
   encapsulation: ViewEncapsulation.None,
   styles: [
     require('./app.css')
@@ -49,7 +51,8 @@ import { RouterActive } from './router-active';
   { path: '/',      name: 'Index', component: Home, useAsDefault: true },
   { path: '/home',  name: 'Home',  component: Home },
   // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
-  { path: '/about', name: 'About', loader: () => require('es6-promise!./about')('About') }
+  { path: '/about', name: 'About', loader: () => require('es6-promise!./about')('About') },
+  { path: '/login', name: 'Login', component: Login }
 ])
 export class App {
   angularclassLogo = 'assets/img/angularclass-avatar.png';

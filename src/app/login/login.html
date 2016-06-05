@@ -1,0 +1,25 @@
+  <md-card>
+    <div layout="column" layout-align="start center">fdasfdasfadsfdsfds</div>
+     <div layout="column" layout-align="start center">
+        <div class="widget-item z-depth-1"> <b>Please sign In</b>
+            <div>
+
+                    <form role="form" (submit)="login($event, username.value, password.value)">
+                        <div layout="row" layout-align="start center">
+                            <div class="input-field col s12">  <md-icon>account_circle</md-icon>
+                                <input type="text" #username class="form-control" id="username" placeholder="Username">
+                                <label for="username">Enter Username</label>
+                            </div>
+                            <div class="input-field col s12"> <md-icon>https</md-icon>
+                                <input type="password" #password class="form-control" id="password" placeholder="Password">
+                                <label for="password">Enter Password</label>
+                            </div>
+                            <button class="btn waves-effect waves-light" type="submit">Login Please<i class="mdi-action-lock-open right"></i></button>
+                        </div>
+                    </form>
+
+            </div>
+        </div>
+    </div>
+
+</md-card>
