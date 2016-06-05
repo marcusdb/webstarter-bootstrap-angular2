@@ -8,6 +8,7 @@ import { FORM_PROVIDERS, HashLocationStrategy, LocationStrategy } from '@angular
 import { HTTP_PROVIDERS } from '@angular/http';
 // Angular 2 Router
 import { ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import {BOOTSTRAP3_VIEWPROVIDERS} from './bootstrap3'
 
 /*
 * Application Providers/Directives/Pipes
@@ -17,7 +18,8 @@ export const APPLICATION_PROVIDERS = [
   ...FORM_PROVIDERS,
   ...HTTP_PROVIDERS,
   ...ROUTER_PROVIDERS,
-  {provide: LocationStrategy, useClass: HashLocationStrategy }
+  {provide: LocationStrategy, useClass: HashLocationStrategy },
+  BOOTSTRAP3_VIEWPROVIDERS
 ];
 
 export const PROVIDERS = [

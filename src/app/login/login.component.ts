@@ -3,14 +3,15 @@ import { Router, RouterLink } from '@angular/router-deprecated';
 import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
 import { Http, Headers } from '@angular/http';
 import { contentHeaders } from '../common/headers';
+import {MODAL_DIRECTVES, BS_VIEW_PROVIDERS} from 'ng2-bootstrap';
 
 
 let template = require('./login.html');
 
 @Component({
   selector: 'login',
-  directives: [RouterLink, CORE_DIRECTIVES, FORM_DIRECTIVES],
-   
+  directives: [RouterLink, CORE_DIRECTIVES, FORM_DIRECTIVES,MODAL_DIRECTVES],
+  viewProviders:[BS_VIEW_PROVIDERS],
   template: template
 })
 export class Login {

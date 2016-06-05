@@ -11,6 +11,8 @@ import '@angular/common';
 import '@angular/http';
 import '@angular/router-deprecated';
 
+import 'ng2-bootstrap';
+
 // RxJS
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';

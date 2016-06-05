@@ -1,25 +1,33 @@
-  <md-card>
-    <div layout="column" layout-align="start center">fdasfdasfadsfdsfds</div>
-     <div layout="column" layout-align="start center">
-        <div class="widget-item z-depth-1"> <b>Please sign In</b>
-            <div>
+<button class="btn btn-primary" (click)="loginModal.show()">Large modal</button>
 
-                    <form role="form" (submit)="login($event, username.value, password.value)">
-                        <div layout="row" layout-align="start center">
-                            <div class="input-field col s12">  <md-icon>account_circle</md-icon>
-                                <input type="text" #username class="form-control" id="username" placeholder="Username">
-                                <label for="username">Enter Username</label>
-                            </div>
-                            <div class="input-field col s12"> <md-icon>https</md-icon>
-                                <input type="password" #password class="form-control" id="password" placeholder="Password">
-                                <label for="password">Enter Password</label>
-                            </div>
-                            <button class="btn waves-effect waves-light" type="submit">Login Please<i class="mdi-action-lock-open right"></i></button>
-                        </div>
-                    </form>
+<!--login modal-->
+<div bsModal #loginModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="loginModal.hide()" aria-label="Close" aria-hidden="true">×</button>
+                <h1 class="text-center">Login</h1>
+            </div>
+            <div class="modal-body">
 
+                <form role="form" (submit)="login($event, username.value, password.value)" class="form col-md-12 center-block">
+                    <div class="form-group">
+                        <input type="text" #username class="form-control input-lg" id="username" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" #password class="form-control input-lg" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Sign In</button>
+                        <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                </div>
             </div>
         </div>
     </div>
-
-</md-card>
+</div>
