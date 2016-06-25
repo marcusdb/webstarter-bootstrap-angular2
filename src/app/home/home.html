@@ -21,6 +21,9 @@
 
       <input placeholder="Submit Local State to App State" [value]="localState.value" (input)="localState.value = $event.target.value"
         autofocus>
+        before
+        <ckeditor [(ngModel)]="ckeditorContent" [config]="{uiColor: '#99000'}"></ckeditor>
+        after
 
       <button md-raised-button color="primary">Submit Value</button>
     </form>
